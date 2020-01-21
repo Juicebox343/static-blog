@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+
+<!-- https://flaticons.net/search.php?search=code&x=0&y=0 -->
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Joe Heiser</title>
+		<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="myStyle.css">
+	</head>
+	
+	<body>
+		
+		<nav id="top-nav">
+			<ul>
+				<li><a href="http://www.mycats.cool">Look at my cats</a></li>
+			</ul>
+		</nav>
+		<header id="header">
+			<div id="big-name">
+				<h1 id="my-name"></h1>    
+				<div class="color-bar"></div>
+			</div>
+			<div class="confetti"></div>
+			
+			<nav id="main-nav">
+				
+			</nav>
+
+			<aside>
+				<p>Fledgling Fullstack Developer focusing on</p> 
+				<p>HTML, CSS, Javascript, NodeJS, Express, and MySQL</p>
+
+				<p>Trying to get into</p>
+				<p>SASS, React, Python, and PHP</p>
+
+				<p>And REALLY trying to get into proper #A11Y-ship</p>
+			</aside>
+
+			<nav id="social-nav">
+				<a href="https://twitter.com/Juicebox343"><img src="assets/Twitter-Bird-128.png" alt="Twitter Account: @Juicebox343"></a>
+				<a href="https://github.com/Juicebox343"><img src="assets/Braces-01-128.png" alt="Repositories: github"></a>
+			</nav>
+		</header>
+		
+		<main>
+			
+			<article>
+				<h2>Fetch()ing Feeds</h2>        
+				<p>1/20/20</p>
+				<p>Work on the podcast player is slow. </p>
+	
+				<p>I’ve got the main functionality of it set up as far as I can tell. Play/Pause works, Mute/Unmute, I can click the progress bar to change where I am in the file, I can change the volume, and the time comes up once the metadata has loaded.</p>
+	
+				<p>Title info is hardcoded at the moment as I want that to be pulled from the RSS feed, same with the URL.</p>
+	
+				<p>I’ve mentioned before that my learning started on content based on the JS landscape of 4-5 years ago, so my first instinct for pulling an RSS feed? XMLHttprequest.</p>
+	
+				<p>I’m sure it would work. I’ve used it for other things, but after awhile I shifted over to fetch(). I’ve never used it and its simpler format helped sort of clear my screen of distractions as I tried to figure out parsing and such. </p>
+	
+				<p>I’m nearly there. I can pull all the information I want from the feed, but now.. Now I need to create a player for each item pulled from the XML. </p>
+	
+				<p>I thought this would be easier than it is, and I’m confident it should be much easier than I’m making it. Something with classes? I don’t anything about classes but I assume they’re the solution to all of my problems.</p>
+	
+				<p>For the moment I’m setting up JS to dynamically create the HTML elements I need for my player, setting attributes of each element, and adjusting the ID of each to be something like.. “Player-controls” + itemNum</p>
+	
+				<p>So that I end up with unique IDs. In my head this means the play/pause button and title information and all that will point to the right place. But this feels super sloppy and sort of.. Unconfirmed. We’ll see how it works once I’m done.</p>
+	
+				<p>I’m so confident there’s a better way to do this. I’m just not sure how to search for it yet.</p>
+			</article>
+			
+			<div class="divide"></div>
+
+			<article>
+				<h2>Starting on a Podcast Player</h2>        
+				<p>1/19/20</p>
+				<p>With podcast websites come podcast players. Work on the site layout itself is going well. Moved from Gimp to VS Code today. Played with some new tools I learned from the Junior to Senior Developer Course I’m taking on Udemy and really squashed those images down. </p>
+	
+				<p>I’m pleased with the design so far. But now onto my white whale. A podcast player.</p>
+	
+				<p>A podcast player should be able to read a feed, find the appropriate item within the XML, pull title information, episode description, and most importantly, the URL of the episode file itself. </p>
+	
+				<p>I’m starting backwards by trying to make a custom player before I figure out how to parse the feed and get that data into my respective players.</p>
+	
+				<p>Oh yes. And I want multiple players per screen, up to like 8? The number of episodes on each page. </p>
+	
+				<p>So figuring out how to iterate over the XML and produce a player for each item is going to be something I figure out down the road. </p>
+	
+				<p>As far as styling and building the custom player I started with MDN. </p>
+	
+				<p><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Audio_and_video_delivery/cross_browser_video_player">MDN - Cross Browser Video Player</a></p>
+	
+				<p>And</p>
+	
+				<p><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Audio_and_video_delivery/Video_player_styling_basics">MDN - Video Styling Basics</a></p>
+	
+				<p>And of course a little of the audio documentation. </p>
+	
+				<p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio">MDN - Audio Tag</a></p>
+	
+				<p>The above links are for making a video player, but it’s surprisingly similar. </p>
+	
+				<p>In the end I came up with this: </p>
+	
+				<p>[[Picture]]</p>
+	
+				<p>Which looks pretty ok for a first go!</p>
+	
+				<p>Is it my final draft? Not sure. I’ve got a long way to go before it’s actually functional. I may get some inspiration. </p>
+			</article>
+
+			<div class="divide"></div>
+
+			<article>
+				<h2>Podcast Site Redesign</h2>        
+				<p>1/18/20</p>
+				<p>I’m jumping between projects again and again and again. Today, with the help of my co-host, I began working on the redesign of our podcast landing page for Tandem Legends. </p>
+	
+				<p>This is what we’ve come up with so far:</p>
+	
+				<p>[[Picture]]</p>
+	
+				<p>The thoughts behind the redesign are a bit scattered admittedly. Was it necessary? Perhaps not, but I’ve grown tired of our current layout. It is (or was) a wordpress theme heavily modified by me. But my sense of colors at the time can be summarized by “Oh, well Link wears green so lets get a lot of green in there.” followed by, “Oh that’s too much green.” </p>
+	
+				<p>This feels cleaner, a bit more modern but without losing soul? Maybe that’s in my head. Shannon did most of the banner work, which I think turned out beautifully. I added the splats of colored paint to represent the goddesses and add some color to it. </p>
+	
+				<p>I’m still experimenting with format but for now I want it to be entirely populated by the RSS feed rather than needing me to upload files or type things out. That might eliminate the ability to have comments on each post, but will we miss them? Not sure yet.</p>
+			</article>
+
+			<div class="divide"></div>
+
+			<article>
+				<h2>User Authentication in NodeJS</h2>        
+				<p>1/17/20</p>
+	
+				<p>I’m becoming increasingly nervous that what little I know of user authentication is, in fact, garbage. </p>
+	
+				<p>I recently came across a hackernoon article last updated in 2017 talking about several packages that I use complaining that these and the tutorials and documentation that accompany them are shallow at best and missing important, app-shattering details at worst. </p>
+	
+				<p>I’ve been struggling to get Passport to work on my latest little project. I struggled getting it to work on my last project and for the life of me can’t recall what finally made it work. But now with this added information I’m worried it was never really “working” in any real sense to begin with.</p>
+	
+				<p>I don’t want to spend my time learning something that is ultimately going to need to be unlearned..</p>
+	
+				<p>The article did expose me to Forgot Password Cheat Sheet which was pretty illuminating. Its surprising how many of these recommendations I don’t actually see being followed in the real world, but seeing them spelled out makes it seem so reasonable and logical.</p>
+	
+			</article>
+				
+			<div class="divide"></div>
+
+			<article>
+				<h2>Development Courses</h2>        
+				<p>1/16/20</p>
+	
+				<p>My education has been a bit spotty. I’ve taken C++ classes in high school, done Python tutorials for the Blender Game Engine, and had several false starts in the area of web development. </p>
+	
+				<p>My first class was based on a podcast ad I heard enough times that I decided to go for it. OneMonth. The class itself was fine if superficial. It characterizes itself as prepping you for a job in something like 15 minutes a day for a month. </p>
+	
+				<p>After a month I can tell you I did not feel ready to tackle original problems, but I did churn out several small projects very quickly, which was enough to keep the original of interest spark lit.</p>
+	
+				<p>I moved from OneMonth and found Udemy. Through much poking around I eventually landed on Colt Steele’s Web Developer Bootcamp. This ended up being exactly the kind of guided learning I needed, and Colt seemed to know what he was doing.</p>
+	
+				<p>Halfway through the course, I realized it was created 4 years before I had started it, and in those 4 years the changes brought in by ES6 were taking root.  </p>
+	
+				<p>The Javascript I was learning was not invalid per se, but it wasn’t up to date. It wasn’t as clean as it could be now, and because of the nature of a scattershot course like that that intends to capture all aspects of Full Stack development, my foundational JS was pretty shallow anyway. </p>
+	
+				<p>I’ve been spinning my wheels for several months after having completed that course. Attempting to take what I’ve learned and apply it to my own projects, while also finding that syntax on StackOverflow or MDN is not quite what I’m familiar with. </p>
+	
+				<p>This caused a number of mental blocks and countless hours of retracing my code, trying to split my learning when my grasp on what I had written was tenuous at best.</p>
+	
+				<p>I should have done this much earlier, but I recently purchased Wes Bos’s Beginner Javascript course and oh boy oh boy. Things are turning around for me. </p>
+	
+				<p>So many tiny foundational elements that I could have been relying on are coming to the surface. I finally get that in depth discussion and tutelage you can only get through a targeted course.</p>
+	
+				<p>Zero regrets buying this course. Maybe its basic for old pro’s but for a largely self taught person like me, it’s providing something that was sorely needed.  </p>
+			</article>
+
+			<div class="divide"></div>
+
+			<article>
+				<h2>Digital Ocean and Node.js</h2>        
+				<p>1/15/20</p>
+	
+				<p>After struggling to make any headway with my existing host, A2, in getting my Express based Star Wars RPG app running, I decided to give Digital Ocean a try.</p>
+	
+				<p>I’m not sure where I heard of Digital Ocean but it seemed like a good alternative to the much recommended Heroku. I’m avoiding Heroku for the moment because it requires that I use PostgreSQL and I’m committed to getting a few functioning MySQL projects completed before I start splitting hairs and dividing my focus too much. </p>
+	
+				<p>I spent all those hours learning MySQL because it seemed like the best relational database to learn if I were to only learn one. So I’m going to use it. </p>
+	
+				<p>My assistant app is not in a final form at all, but it’s close enough that I’m ready to try deploying something, and it’s proven to be functional on my local machine. So how hard could it be?</p>
+	
+				<p>The app itself is written using the NodeJS framework, Express, and MySQL as the database. </p>
+	
+				<p>Now, on to what happened today.</p>
+	
+				<p>After clumsily getting everything set up on my end, ensuring my environment variables were in place, etc., I began the process as laid out by the Digital Ocean docs and to be honest? It went swimmingly for such a long time I thought I might actually pull this off.</p>
+	
+				<p>Keep in mind I’ve been struggling with deployment for a few days, so this was a pretty exciting prospect for me. </p>
+	
+				<p>Things started to get bumpy here and there as a few of the tutorials specified specific versions of Node or whatever else, thinking version was important for the proper functioning of Digital Ocean, I abided by these things. Turns out I needed to get all that replaced and upgraded to get any of the additional packages working together. </p>
+	
+				<p> And then something popped up I had never heard of before. Reverse Proxies. </p>
+	
+				<p>Surely this isn’t for me? Nginx? What is that. I’ve never heard of that so it must be for something more advanced than deploying a simple website. Right?</p>
+	
+				<p>Well eventually I figured out it is precisely for me. At least if I’m hoping to model realistic development expectations. Express itself suggests using a reverse proxy to actually render your web pages. That sentence I just typed out makes very little sense to me but I’m confident I used the correct words in the correct order.</p>
+	
+				<p>After pouring over several tutorials both on and off Digital Ocean’s own library of community tutorials, I can’t say I understand it yet. </p>
+	
+				<p>But through much hammering I managed to get something to appear on my screen. The DNS isn’t resolving for some reason yet. Who knows why. But I can type in the IP of my website and get--some syntax errors?</p>
+	
+				<p>I haven’t chased down why this is the case yet, but on my local machine formatting my EJS like so: </p>
+	
+				<p><code><% include ../views/header %></code></p>
+	
+				<p>Is just fine.</p>
+	
+				<p>But as I eventually realized thanks to StackOverflow, the server or the browser or something is looking for this:</p>
+	
+				<p><code><%- include (‘../views/header’) %></code></p>
+	
+				<p>Visually I can see that the second one is a bit nicer to look at. But I was taught the first one, so why doesn’t it work?</p>
+	
+				<p>I went through every page of my app to correct that and it seems to be working in that regard now.. But then another problem came up.</p>
+	
+				<p>Something about how I’m getting my information on the ID of the logged in user is pulling up as undefined.</p>
+
+<pre><code>
+router.get('/', isAuthenticated, function(req, res, next){
+	let user = req.user[0].id;
+	var q = "SELECT * FROM characters WHERE owning_user = ?";
+	db.query(q, [user], function(err, results){
+	if(err){
+		console.log(err);
+		} else {
+			var characterList = results;
+			res.render("characters/index", 
+			{characterList: characterList, user: user});
+		}
+	});
+});
+</code></pre>
+	
+				<p>I haven’t done the troubleshooting yet, but something here is breaking. It works fine on my local machine, but I need to get that user information if I’m going to pull up the appropriate data.</p>
+			</article>
+			<a id='to-top' href="#top">Back to top</a>
+		</main>
+
+		
+	<script type="text/javascript" src="myScript.js"></script>
+
+	</body>
+	
+</html>
