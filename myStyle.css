@@ -193,8 +193,14 @@ code{
 
 #to-top{
 	color: #FC5185;
+	padding-bottom: 50px;
 }
 
+.article-images{
+	display: block;
+	text-align: center;
+	width: 60%;
+}
 
 /* Animations */
 @keyframes tumbleWords {
@@ -369,5 +375,17 @@ code{
 		display: block;
 		background-color: #f1f1f1;
 		white-space: pre-line;
+	}
+
+	.article-images{
+		width: 100%;
+	}
+
+	.divide{
+		margin: 40px 0;
+		height: 3px;
+		width: 100%;
+		background-color: #FC5185;
+
 	}
 }
