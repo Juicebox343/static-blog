@@ -23,7 +23,7 @@
 			</div>
 			<div class="confetti"></div>
 			
-			<nav id="main-nav" role="navigation" aria-label="Main menu">
+			<!-- <nav id="main-nav" role="navigation" aria-label="Main menu">
 				<ul class="nav level-1 list-reset" role="menubar" aria-hidden="false">
 					<li class="has-subnav" role="menuitem" aria-haspopup="true">
 						<a href="/ongoingprojects">Ongoing Projects</a>
@@ -41,14 +41,12 @@
 					</ul>
 					</li>
 				</ul>
-			</nav>
+			</nav> -->
 
 			<aside>
-				<p>Fledgling Fullstack Developer focusing on</p> 
-				<p>HTML, CSS, Javascript, NodeJS, Express, and MySQL</p>
+				<p>Fledgling Fullstack Developer focusing on HTML, CSS, Javascript, NodeJS, Express, and MySQL</p>
 
-				<p>Trying to get into</p>
-				<p>SASS, React, Python, and PHP</p>
+				<p>Trying to get into SASS, React, Python, and PHP</p>
 
 				<p>And REALLY trying to get into proper #A11Y-ship</p>
 			</aside>
@@ -60,7 +58,37 @@
 		</header>
 		
 		<main>
-			
+			<!-- <div class="divide hideMe"></div> -->
+			<article>
+				<h2>Podcast Player</h2>        
+				<p>1/27/20</p>
+				<p>I keep writing myself down this tunnel despite knowing.. like.. knowing in my bones.. That there is a better way to do this. </p>
+
+				<p>For now I just want something done. And it nearly is.</p>
+
+				<p>The player itself is currently here: <a href="https://github.com/Juicebox343/tandem/blob/master/player.js">Github - player.js</a>
+				A lot of that code is thanks to MDN’s guidance.</p>
+
+				<p>For the moment, my feed is fetched and parsed, pulling Title, URL and Description into their own variables for each item in the feed.</p>
+
+				<p>Also in that loop, the makeAPlayer function is called, which adds a bunch of HTML to the document, inserting those variables when needed, plus an episode counter that gets tacked onto the end of IDs for each episode found in the feed.</p>
+
+				<p>I have to say, it was simultaneously thrilling and humbling to realize I didn't need to individually create each HTML element and then attach it to its parent. Thrilling because it was so much cleaner to just change the innerText of a single element. Humbling because I'd already done all the work of typing out and attaching each element manually. :(</p>
+
+				<p>Still in that function, all the event listeners are added according to the IDs + the epCount.</p>
+
+				<p>And then down the road some math is done to get the timing to translate into something more readable.</p>
+
+				<p>This feels only slightly better than spaghetti code.</p>
+
+				<p>In my head the player itself should be an object that has its own methods. And then I replicate it and pass things into it to get myself a page full of separate audio players.  </p>
+
+				<p>As it stands now, though. It works. So I’m going to move on to generally completing the Tandem page and then circle back to see what can be done with the audio player.</p>
+		
+			</article>
+
+			<div class="divide"></div>
+
 			<article>
 				<h2>Fetch()ing Feeds</h2>        
 				<p>1/20/20</p>
