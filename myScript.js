@@ -40,3 +40,4 @@ for (i = 1; i < 150; i++){
 function randomColor(item){
 	item.style.backgroundColor = COLOR_ARRAY[Math.floor(Math.random() * COLOR_ARRAY.length)];
 }
+

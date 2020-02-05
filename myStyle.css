@@ -83,6 +83,12 @@ header{
 	text-align: center;
 }
 
+nav button{
+	border: none;
+	background-color: transparent;	
+}
+
+
 #social-nav img{
 	height: 100%;
 }
