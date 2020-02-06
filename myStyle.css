@@ -66,7 +66,7 @@ header{
 	border-right: 3px solid #FC5185;
 	display: grid;
 	grid-template-columns: auto;
-	grid-template-rows: 10vh 10vh auto auto;
+	grid-template-rows: 12vh auto;
 	grid-template-areas: 
 	"name"
 	"aside"
@@ -83,10 +83,49 @@ header{
 	text-align: center;
 }
 
+
+
 nav button{
-	border: none;
+	font-size: 1.5rem;
+	font-family: 'Lato', sans-serif;
+	color: #FC5185;
+	border: transparent solid 2px;
 	background-color: transparent;	
 }
+
+nav ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+ul li{
+	margin: 0;
+	padding: 0;
+}
+
+.dropdown:hover .dropdown-content {
+	display: block;
+	position: relative;
+	top: 0;
+}
+
+.dropdown-content {
+	display: none;
+	min-width: 160px;
+	z-index: 1;
+	position: relative;
+	left: -10px;																
+	top: -400px;
+}
+
+.dropdown-content a{
+	display: block;
+	text-align: right;
+}
+
+
+
 
 
 #social-nav img{
@@ -115,11 +154,11 @@ nav button{
 	list-style: none;
 	padding-right: 15px;
 	text-align: right;
+	padding-right: 40px;
 }
 
 #main-nav li{
 	transform: translateY(100%);
-	padding: 0 0 24px 0;
 	opacity: 0;
 	animation-name: menuSlide;
 	animation-duration: .5s;
@@ -131,7 +170,21 @@ nav button{
 	list-style: none;
 	text-decoration: none;
 	color: #FC5185;
-	font-size: .75em;
+	font-size: 1rem;
+	transition: font-size 0.2s;
+	
+}
+
+#main-nav a:hover{
+	font-size: 1.1rem;
+}
+
+.navHeader span{
+	color: #FC5185;
+}
+
+.navHeader:last-of-type{
+	margin-top: 20px;
 }
 
 aside{
@@ -150,20 +203,6 @@ main{
 	animation-duration: .5s;
 	animation-fill-mode: forwards; 
 	animation-delay: 0.3s;
-}
-.dropdown-btn{
-	background-color: white;
-	border: none;
-	color: #5A5A5A;
-	font-size: 1.5rem;
-	padding: 0 0 0 5px;
-}
-
-.array-boxes{
-	width: 25px;
-	height: 15px;
-	display: inline-block;
-	margin: 5px;
 }
 
 .confetti{
@@ -214,7 +253,7 @@ code{
 	display: none;
 }
 
-/* Animations */
+/* ==== Animations ==== */
 @keyframes tumbleWords {
 	0%{
 		transform: translateY(-100px);	
@@ -323,7 +362,6 @@ code{
 
 @media (max-width: 1000px) {
 	body{
-		font-family: 'Lato', sans-serif;
 		margin:0;
 		padding: 0;
 		border: solid 4px #FC5185;
@@ -386,6 +424,7 @@ code{
 	#top-nav ul{
 		padding: 0;
 	}
+
 	.confetti{
 		visibility: hidden;
 	}
