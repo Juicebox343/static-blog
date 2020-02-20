@@ -19,14 +19,6 @@ NAME_ARRAY.forEach(function(letter){
 	}
 });
 
-COLOR_ARRAY.forEach(function(element){
-	let boxDiv = document.createElement("div"); //Create the DOM elements
-	boxDiv.setAttribute('class', 'array-boxes');
-	document.getElementById("array-methods").appendChild(boxDiv);
-	boxDiv.style.backgroundColor = element;
-});
-
-
 for (i = 1; i < 150; i++){
 	let confetti = document.createElement("div");
 	confetti.setAttribute('class', 'confetti');

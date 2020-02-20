@@ -7,6 +7,7 @@
 		<title>Joe Heiser</title>
 		<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="myStyle.css">
+		<link rel="stylesheet" type="text/css" href="styles/player-styles.css">
 	</head>
 	
 	<body>
@@ -59,6 +60,20 @@
 		
 		<main>
 			<!-- <div class="divide hideMe"></div> -->
+			<article>
+				<h2>Podcast Player Debut</h2>        
+				<p>2/17/20</p>
+				<div class="player"></div>
+				<p>Drumroll. A simple podcast player.</p>
+				<p>Literally nothing fancy about it, but that's what I think I love about it? The biggest problem at the moment is that its based on using fetch(), so there is zero compatability with Internet Explorer. At the moment I don't mind so much, but a final release will need to be done that includes XMLHttprequest at some point. But that's the future!</p>
+				<p>I have my podcast's RSS feed URL saved as a constant in the JS itself. The content is fetched as XML and parsed, finding each occurence of Title, URL, and Description. In the future I'd like to pull from the iTunes tags in the feed, but I struggled with that one.</p>
+				<p>Another big struggle point that I'm still a bit sore over is the content of the description itself. I'd wanted to pull that and use it as a drop down or popup or something, but Libsyn's text editor uses inline styles to set all of the styles, which makes things complicated for me. That plus apparently each press of teh return key is tagged as a <code>&lt;p&gt;</code> tag, which means I can't even reliably find the <code>&lt;img&gt;</code> tag to begin with. Anyway.</p>
+				<p>Following some examples in the MDN docs around audio/video players in HTML, I was able to style new buttons, a progress bar, and a volume bar. At that point I slapped a bit of paint on there and we got ourselves a <s>stew going</s> a podcast player.</p>
+				<p>I'm tearing my hair out trying to figure out a layout for the new Tandem Legends podcast page, while also diving into tutorials on managing Digital Ocean droplets and developing basic Wordpress themes.. As such I've been feeling scattered enough that progress has been slow on just about all of my projects.</p>
+				<p>My state of mind is probably not helped by giving myself a hard deadline of moving on from my current position in my current organization by April 3rd. A deadline reinforced by the separation notice I submitted two weeks ago.</p>
+				<p>Yes, that's an incredibly long lead time but after spending 12 years in the same organization I recognized that unless I made the decision then and there, I'd find a way to delay. </p>
+			</article>
+
 			<article>
 				<h2>Podcast Player</h2>        
 				<p>1/27/20</p>
@@ -293,6 +308,7 @@ router.get('/', isAuthenticated, function(req, res, next){
 
 		
 	<script type="text/javascript" src="myScript.js"></script>
+	<script type="text/javascript" src="scripts/player.js"></script>
 
 	</body>
 	
