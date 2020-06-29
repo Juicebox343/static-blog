@@ -1,0 +1,211 @@
+body, html{
+    max-height: 100%;
+}
+
+figure{
+    max-width: 100%;
+    min-width: 385px;
+    margin: 0;
+    font-family: 'Alata', sans-serif;
+    color: white;
+    background: #363636;
+    background-image: linear-gradient(160deg,  #363636, #2d2d2d);
+    box-shadow: 1px 1px 4px #4f4f4f, 1px 1px 2px #4f4f4f;
+    font-size: .8rem;
+    border-radius: 2px;
+    height: 100%;
+}
+
+
+.audioPlayer{
+    height: 100%;
+}
+
+#player{
+    width: 100%;
+    height: 100%;
+}
+
+.player-controls{
+    height: 100%;
+    padding: 10px 20px 10px 0px;
+    display: grid;
+    grid-template-columns: minmax(100px, 0.5fr) minmax(50px, 3fr) minmax(50px, 2fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+    "play . ."
+    "play title title"
+    "play seek seek"
+    "play time time"
+    "play mods volume";
+}
+
+figure p{
+    display: block;
+}
+
+figure a{
+    color: white;
+}
+
+figure a:visited{
+    color: lightgray;
+}
+
+#playpause{
+    grid-area: play;
+}
+
+.episode-title{
+    grid-area: title;
+    font-size: 1.25rem;
+    margin: 0;
+}
+
+.buttonWrapper{
+    border-top: white solid 2px;
+    text-align: center;
+}
+
+.expandDescription{
+    color: white;
+}
+
+.player-progress{
+    grid-area: seek;
+    width: 100%;
+}
+
+.visible{
+    display: none;
+}
+
+.progress-bar{
+    width: 100%;
+}
+
+.playback-modifiers button{
+    color: white;
+    padding: 5px;
+}
+
+button {
+    border:none;
+    cursor:pointer;
+    background:transparent;
+    background-size:contain;
+    background-position: center;
+    background-repeat:no-repeat;
+    padding: 0;
+ }
+
+button:focus {
+    outline: none;
+}
+
+button::-moz-focus-inner {
+    border: 0;
+  }  
+
+.controls button[data-state="play"] {
+    background-image: url('player_icons/play.svg');
+    width: 100%;
+    height: 100%;
+ }
+ 
+ .controls button[data-state="pause"] {
+    background-image: url('player_icons/pause.svg');
+    width: 100%;
+    height: 100%;
+ }
+
+ .controls button[data-state="mute"] {
+    background-image: url('player_icons/volume-off.svg');
+    width: 25px;
+    height: 25px;
+    place-self: center;
+ }
+
+ .controls button[data-state="unMute"] {
+    background-image: url('player_icons/volume-high.svg');
+    width: 25px;
+    height: 25px;
+    place-self: center;
+ }
+
+progress{
+    background-color: rgba(238, 238, 238, 0.544);
+}
+
+progress[value] {
+    width: 100%;
+    height: 5px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+}
+
+progress[value]::-webkit-progress-bar {
+    background-color: rgba(238, 238, 238, 0.544);
+    border-radius: 2px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+}
+
+progress[value]::-webkit-progress-value {
+    background-color: white;
+    border-radius: 2px; 
+    background-size: 35px 20px, 100% 100%, 100% 100%;
+}
+
+progress::-moz-progress-bar { /* for FF ::progress-bar is the value bar */
+    background-color: white;
+}
+
+#back15{
+    background-image: url('player_icons/history.svg');
+    width: 25px;
+    height: 25px;
+}
+
+#forward15{
+    background-image: url('player_icons/update.svg');
+    width: 25px;
+    height: 25px;
+}
+
+.timing{
+      grid-area: time;
+      display: flex;
+      justify-content: space-between;
+  }
+
+.playback-modifiers{
+    grid-area: mods;
+    margin-top: 3px;
+    display: flex;
+    align-content: center;
+}
+
+
+.volume-controls{
+    grid-area: volume;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.volume-bar{
+    background-color: rgb(169, 169, 169);
+    height: 5px;
+    align-self: center;
+    width: 100px;
+}
+
+.volume-fill{
+    background-color:white;
+    width: 100%;
+    height: 5px;
+    display: inline-block;
+    position: relative;
+    bottom: 7px;
+}

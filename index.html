@@ -1,22 +1,21 @@
 <!DOCTYPE html>
 
-<!-- https://flaticons.net/search.php?search=code&x=0&y=0 -->
 <html>
 	<head>
 		<meta charset="UTF-8">
 		<title>Joe Heiser</title>
 		<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Fira+Sans&family=Merriweather&display=swap" rel="stylesheet"> 
 		<link rel="stylesheet" type="text/css" href="myStyle.css">
-		<link rel="stylesheet" type="text/css" href="styles/player-styles.css">
 	</head>
 	
 	<body>
 		
-		<nav id="top-nav">
+		<!-- <nav id="top-nav">
 			<ul>
 				<li><a href="http://www.mycats.cool">Look at my cats</a></li>
 			</ul>
-		</nav>
+		</nav> -->
 		<header id="header">
 			<div id="big-name">
 				<h1 id="my-name"></h1>    
@@ -55,15 +54,50 @@
 			<nav id="social-nav">
 				<a href="https://twitter.com/Juicebox343"><img src="assets/Twitter-Bird-128.png" alt="Twitter Account: @Juicebox343"></a>
 				<a href="https://github.com/Juicebox343"><img src="assets/Braces-01-128.png" alt="Repositories: github"></a>
+				<a href="https://ko-fi.com/heiserj"><img src="assets/kofi_stroke.png" alt="Support Me on Ko-fi"></a>
+				
 			</nav>
+			<div class="mobile-color-bar"></div>
 		</header>
 		
 		<main>
-			<!-- <div class="divide hideMe"></div> -->
 			<article>
-				<h2>Podcast Player Debut</h2>        
-				<p>2/17/20</p>
-				<div class="player"></div>
+				<div class='article-header'>
+					<h2>Animal Crossing Pocket Price Guide (Made in React)</h2>        
+					<p class='date-line'>5/13/20</p>
+				</div>
+				<img class='article-images' src='/assets/post-images/acnh.png' alt='Screenshot of a searchable creature list for Animal Crossing New Horizons'>
+				<p><a href='http://www.acpocketguide.com/'>ACNH Pocket Price Guide</a></p>
+				<p>My first project built in React ended up answering a struggle I kept coming up against in playing Animal Crossing New Horizons. I want to optimize my pocket usage when I visit an island, but I got tired of the finicky process of loading up an article from the top Google result for "ACNH fish prices" and trying to use "Find in page" on my phone over and over again.</p>
+				<p>My goal was to make a quick reference, and so the most relevant information is presented first and foremost. A quick tap will give you other details on the creature you've selected.</p>
+				<p>I don't necessarily feel the Pocket Price Guide is done just yet, but it's definitely functional!</p>
+				<hr>
+				<p>It's been a grip since I've written anything, but I've been working pretty diligently (a Herculean effort at times considering COVID-19 goings on) the past few months.</p>
+				<p>I've been feeling pulled in a several directions lately, wanting to revisit (and finish) some old web design projects, dabbling in JS game development with Phaser, and just recently, pulling the trigger on learning React</p>
+				<p>I've been hesitant for many reasons in diving into React. Part of it being that I never feel like I've truly grokked all I need to know about JS. There's also a pretty big paradigm shift in working on React, something I'm still struggling with, and definitely struggled with on this project. I'm sure it'll get easier, but for now it feels so messy. My instinct to whip out vanilla JS to querySelect is strong while my confidence in when and where to set states and props is shakey at best.</p>
+				<p>I've got a few more small projects in mind that'll hopefully reinforce some of these new concepts.</p>
+			</article>
+
+			<div class="divide"></div>
+
+			<article>
+				<div class='article-header'>
+					<h2>Pandemics.</h2>        
+					<p class='date-line'>3/20/20</p>
+				</div>
+				<p>They blow.</p>
+	
+			</article>
+
+			<div class="divide"></div>
+
+			<article>
+				<div class='article-header'>
+					<h2>Podcast Player Debut</h2>        
+					<p class='date-line'>2/17/20</p>
+				</div>
+				
+				<iframe src='assets/player/player.html' id='player-frame' title='The podcast player'></iframe>
 				<p>Drumroll. A simple podcast player.</p>
 				<p>Literally nothing fancy about it, but that's what I think I love about it? The biggest problem at the moment is that its based on using fetch(), so there is zero compatability with Internet Explorer. At the moment I don't mind so much, but a final release will need to be done that includes XMLHttprequest at some point. But that's the future!</p>
 				<p>I have my podcast's RSS feed URL saved as a constant in the JS itself. The content is fetched as XML and parsed, finding each occurence of Title, URL, and Description. In the future I'd like to pull from the iTunes tags in the feed, but I struggled with that one.</p>
@@ -74,9 +108,14 @@
 				<p>Yes, that's an incredibly long lead time but after spending 12 years in the same organization I recognized that unless I made the decision then and there, I'd find a way to delay. </p>
 			</article>
 
+			<div class="divide"></div>
+
 			<article>
-				<h2>Podcast Player</h2>        
-				<p>1/27/20</p>
+				<div class='article-header'>
+					<h2>Podcast Player</h2>        
+					<p class='date-line'>1/27/20</p>
+				</div>
+				
 				<p>I keep writing myself down this tunnel despite knowing.. like.. knowing in my bones.. That there is a better way to do this. </p>
 
 				<p>For now I just want something done. And it nearly is.</p>
@@ -105,8 +144,11 @@
 			<div class="divide"></div>
 
 			<article>
-				<h2>Fetch()ing Feeds</h2>        
-				<p>1/20/20</p>
+				<div class='article-header'>
+					<h2>Fetch()ing Feeds</h2>        
+					<p class='date-line'>1/20/20</p>
+				</div>
+				
 				<p>Work on the podcast player is slow. </p>
 	
 				<p>I’ve got the main functionality of it set up as far as I can tell. Play/Pause works, Mute/Unmute, I can click the progress bar to change where I am in the file, I can change the volume, and the time comes up once the metadata has loaded.</p>
@@ -131,8 +173,11 @@
 			<div class="divide"></div>
 
 			<article>
-				<h2>Starting on a Podcast Player</h2>        
-				<p>1/19/20</p>
+				<div class='article-header'>
+					<h2>Starting on a Podcast Player</h2>        
+					<p class='date-line'>1/19/20</p>
+				</div>
+				
 				<p>With podcast websites come podcast players. Work on the site layout itself is going well. Moved from Gimp to VS Code today. Played with some new tools I learned from the <a href="https://www.udemy.com/share/1013iuBUMSdF9VQ3g=/">The Complete Junior to Senior Web Developer Roadmap</a> I’m taking on Udemy and really squashed those images down. </p>
 	
 				<p>I’m pleased with the design so far. But now onto my white whale. A podcast player.</p>
@@ -161,7 +206,7 @@
 	
 				<p>In the end I came up with this: </p>
 	
-				<img class="article-images" src="assets/images/player_test.png" alt="A simple dark themed audio player with white text and lines">
+				<img class="article-images" src="/assets/post-images/player_test.png" alt="A simple dark themed audio player with white text and lines">
 	
 				<p>Which looks pretty ok for a first go!</p>
 	
@@ -171,13 +216,16 @@
 			<div class="divide"></div>
 
 			<article>
-				<h2>Podcast Site Redesign</h2>        
-				<p>1/18/20</p>
+				<div class='article-header'>
+					<h2>Podcast Site Redesign</h2>        
+					<p class='date-line'>1/18/20</p>
+				</div>
+				
 				<p>I’m jumping between projects again and again and again. Today, with the help of my co-host, I began working on the redesign of our podcast landing page for Tandem Legends. </p>
 	
 				<p>This is what we’ve come up with so far:</p>
 	
-				<img class="article-images" src="assets/images/tandem_mockup.png" alt="A mockup of the new tandem legends website">
+				<img class="article-images" src="/assets/post-images/tandem_mock_up.png" alt="A mockup of the new tandem legends website">
 
 				<p>Still have some playing around to do as far as colors go, but it's nearly there.</p>
 	
@@ -191,8 +239,11 @@
 			<div class="divide"></div>
 
 			<article>
-				<h2>User Authentication in NodeJS</h2>        
-				<p>1/17/20</p>
+				<div class='article-header'>
+					<h2>User Authentication in NodeJS</h2>        
+					<p class='date-line'>1/17/20</p>
+				</div>
+				
 	
 				<p>I’m becoming increasingly nervous that what little I know of user authentication is, in fact, garbage. </p>
 	
@@ -209,8 +260,11 @@
 			<div class="divide"></div>
 
 			<article>
-				<h2>Development Courses</h2>        
-				<p>1/16/20</p>
+				<div class='article-header'>
+					<h2>Development Courses</h2>        
+					<p class='date-line'>1/16/20</p>
+				</div>
+				
 	
 				<p>My education has been a bit spotty. I’ve taken C++ classes in high school, done Python tutorials for the Blender Game Engine, and had several false starts in the area of web development. </p>
 	
@@ -238,8 +292,11 @@
 			<div class="divide"></div>
 
 			<article>
-				<h2>Digital Ocean and Node.js</h2>        
-				<p>1/15/20</p>
+				<div class='article-header'>
+					<h2>Digital Ocean and Node.js</h2>        
+					<p class='date-line'>1/15/20</p>
+				</div>
+				
 	
 				<p>After struggling to make any headway with my existing host, A2, in getting my Express based Star Wars RPG app running, I decided to give Digital Ocean a try.</p>
 	
@@ -303,12 +360,12 @@ router.get('/', isAuthenticated, function(req, res, next){
 	
 				<p>I haven’t done the troubleshooting yet, but something here is breaking. It works fine on my local machine, but I need to get that user information if I’m going to pull up the appropriate data.</p>
 			</article>
-			<a id='to-top' href="#top">Back to top</a>
+			<button id='to-top'>Back to top</button>
+
 		</main>
 
 		
 	<script type="text/javascript" src="myScript.js"></script>
-	<script type="text/javascript" src="scripts/player.js"></script>
 
 	</body>
 	

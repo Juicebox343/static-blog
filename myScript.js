@@ -19,11 +19,11 @@ NAME_ARRAY.forEach(function(letter){
 	}
 });
 
-for (i = 1; i < 150; i++){
+for (i = 1; i < 75; i++){
 	let confetti = document.createElement("div");
 	confetti.setAttribute('class', 'confetti');
 	confetti.style.left = Math.floor(Math.random() * header.offsetWidth-10) + "px";
-	confetti.style.top = Math.floor(Math.random() * header.offsetHeight-10) + "px";
+	confetti.style.top = Math.floor(Math.random() * screen.height) + "px";
 	confetti.style.transform = "rotate(" + Math.floor(Math.random() * 360) + "deg)";
 	randomColor(confetti);
 	header.appendChild(confetti);
@@ -32,3 +32,30 @@ for (i = 1; i < 150; i++){
 function randomColor(item){
 	item.style.backgroundColor = COLOR_ARRAY[Math.floor(Math.random() * COLOR_ARRAY.length)];
 }
+
+
+
+
+
+
+
+toTopButton = document.querySelector("#to-top")
+toTopButton.addEventListener('click', topFunction);
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {
+	scrollFunction()
+};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+    toTopButton.style.display = "block";
+  } else {
+    toTopButton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+	window.scroll({ top: 0, behavior: 'smooth' });
+} 

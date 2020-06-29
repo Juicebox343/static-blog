@@ -1,67 +1,58 @@
-html{
-	height: 100%;
-}
 
-body{
-	font-family: 'Lato', sans-serif;
-	margin:0;
-	padding: 0;
-	max-width: 100%;
-	background-color: #fefefe;
-	display: grid;
-	grid-template-columns: 350px auto;
-	grid-template-rows: 2vh auto;
-	grid-template-areas: 
-	"header top"
-	"header main"
+
+h1, h2, h3{
+	font-family: 'Fira Sans', sans-serif;
+
 }
 
 h1{
 	margin: 19px 0 0 0;
 }
 
-#top-nav{
-	grid-area: top;
-	display: flex;
-	justify-content: flex-end;
-	margin-right: 12px;	
-}
-#top-nav ul{
-	list-style: none;
+#my-name span{
+	font-size: 4.5rem;
 }
 
-#top-nav a{
-	font-size: .6em;
-	text-decoration: none;
-	color: #FC5185;
+h2{
+	margin: 0;
+	font-size: 2rem;
 }
 
-
-#top-nav a:visited {
-  text-decoration: none;
-
+h2, h3{
+	color:#505050;
 }
 
-#my-name{
-	font-size: 3rem;
-	overflow: hidden;
-	text-align: center;
+p, span{
+	font-family: 'Merriweather', serif;
+	color:#505050;
 }
 
-#my-name span {
-	opacity: 0;
-	display: inline-block;
-	animation-name: tumbleWords;
+a{
+	font-family: 'Merriweather', serif;
+	font-size: 1.2rem;
+	color:#FC5185;
+}
+
+html{
+	height: 100%;
+}
+
+body{
+	margin:0;
+	padding: 0;
+	max-width: 100%;
+	background-color: #fefefe;
+	animation-name: fadeIn;
 	animation-duration: .5s;
-	animation-fill-mode: forwards; 
 }
+
 
 header{
-	width: 350px;
-	position: fixed;
-	grid-area: header;
+	width: 450px;
 	padding: 0;
-	margin: auto;
+	position: fixed;
+	top: 0;
+	left: 0;
 	height: 100%;
 	border-right: 3px solid #FC5185;
 	display: grid;
@@ -73,6 +64,63 @@ header{
 	"nav"
 	"social"
 }
+
+aside{
+	grid-area: aside;
+	font-size: .9rem;
+	text-align: center;
+	padding: 20px;
+}
+
+main{
+	margin-left: 452px;
+	margin-bottom: 50px;
+	padding: 18px;
+	opacity: 0;
+	animation-name: fadeIn;
+	animation-duration: .5s;
+	animation-fill-mode: forwards; 
+	animation-delay: 0.3s;
+}
+
+
+#top-nav{
+	grid-area: top;
+	display: flex;
+	justify-content: flex-end;
+	margin-right: 12px;	
+}
+
+#top-nav ul{
+	list-style: none;
+}
+
+#top-nav a{
+	text-decoration: none;
+	color: #FC5185;
+}
+
+
+#top-nav a:visited {
+  text-decoration: none;
+
+}
+
+#my-name{
+	overflow: hidden;
+	text-align: center;
+}
+
+#my-name span {
+	opacity: 0;
+	display: inline-block;
+	animation-name: tumbleWords;
+	animation-duration: .5s;
+	animation-fill-mode: forwards; 
+	font-family: 'Fira Sans', sans-serif;
+}
+
+
 
 #social-nav{
 	grid-area: social;
@@ -106,10 +154,10 @@ header{
 
 #main-nav{
 	grid-area: nav;
-	font-size: 1.5rem;
 	list-style: none;
 	padding-right: 15px;
 	text-align: right;
+
 }
 
 #main-nav li{
@@ -126,31 +174,18 @@ header{
 	list-style: none;
 	text-decoration: none;
 	color: #FC5185;
-	font-size: .75em;
 }
 
-aside{
-	grid-area: aside;
-	font-size: .9rem;
-	text-align: center;
-	padding: 20px;
-}
 
-main{
-	grid-area: main;
-	width: 80%;
-	margin: 0 auto;
-	opacity: 0;
-	animation-name: fadeIn;
-	animation-duration: .5s;
-	animation-fill-mode: forwards; 
-	animation-delay: 0.3s;
+
+.date-line{
+	font-family: 'Fira Sans', sans-serif;
+	margin-top: 0;
 }
 .dropdown-btn{
 	background-color: white;
 	border: none;
 	color: #5A5A5A;
-	font-size: 1.5rem;
 	padding: 0 0 0 5px;
 }
 
@@ -161,14 +196,6 @@ main{
 	margin: 5px;
 }
 
-.confetti{
-	width: 3px;
-	height: 4px;
-	visibility: visible;
-	position: fixed;
-	opacity: 0.35;
-	z-index: -99;
-}
 
 .theCode{
 	background-color: #f1f1f1;
@@ -184,6 +211,10 @@ main{
 	background-color: #FC5185;
 }
 
+.article-header{
+	margin-bottom: 50px;
+}
+
 pre code{
 	display: block;
 	background-color: #f1f1f1;
@@ -195,19 +226,52 @@ code{
 }
 
 #to-top{
-	color: #FC5185;
-	padding-bottom: 50px;
+	display: none;
+	text-decoration: none;
+	position: fixed;
+	padding: 1rem;
+	border-radius: 20px;
+	bottom: 25px;
+	right: 20px;
+	text-align: center;
+	font-size: 1rem;
+	color: #f0f0f0;
+	background-color: #FC5185; 
+	border: none;
+	opacity: .75;
 }
+
+
 
 .article-images{
 	display: block;
-	text-align: center;
-	width: 60%;
+	margin: auto;
+	max-width: 540px;
+	box-shadow: 0px 0px 30px -15px rgb(99, 99, 99);
 }
 
 .hideMe{
 	display: none;
 }
+
+
+/* ==== Misc ==== */
+
+.confetti{
+	width: 5px;
+	height: 12px;
+	position: fixed;
+	opacity: 0.15;
+	z-index: -99;
+}
+
+
+#player-frame{
+	width: 100%;
+	height: 100%;
+	border: none;
+}
+
 
 /* Animations */
 @keyframes tumbleWords {
@@ -316,82 +380,45 @@ code{
 	}
 }
 
-@media (max-width: 1000px) {
-	body{
-		font-family: 'Lato', sans-serif;
-		margin:0;
-		padding: 0;
-		border: solid 4px #FC5185;
-		background-color: #fefefe;
-		display: grid;
-		grid-template-columns: auto;
-		grid-template-rows: auto;
-		grid-template-areas: 
-		"header"
-		"main"
-		"top";
+@media only screen and (max-width: 1000px){
+
+
+
+	#my-name span{
+		font-size: 12rem;
+	}
+
+	h2{
+		font-size: 5rem;
+	}
+	
+	p, span{
+		font-size: 1.2rem;
+	}
+
+	#player-frame{
+		width: 100%;
+		height: 100%;
+		border: none;
 	}
 
 	header{
-		grid-area: header;
+		display: block;
+		width: 100%;
 		position: static;
-		text-align: center;
-		border: none;
-		display: grid;
-		grid-template-columns: auto;
-		grid-template-rows: 12vh 20vh auto auto;
-		grid-template-areas: 
-		"name"
-		"aside"
-		"social"
-		"nav"
 	}
 
-	#my-name{
-		font-size: 3.8em;
+	aside{
+		display: block;
 	}
-	
-	nav{
-		text-align: center;
-		padding: 0;
+
+	aside p{
+		font-size: 2rem;
 	}
 
 	main{
-		padding-right: 10px;
-	}
-	
-	.hideMe{
 		display: block;
-		margin: auto;
-		height: 2px;
-		width: 70vw;
-		background-color: rgb(81, 175, 252);
-	}
-	
-	#main-nav{
-		text-align: center;
-		padding: 0;
-	}
-	
-	#top-nav{
-		justify-content: center;
-		margin: 0;
-	}
-
-	#top-nav ul{
-		padding: 0;
-	}
-	.confetti{
-		visibility: hidden;
-	}
-
-	
-}
-
-@media (max-width: 650px) {
-
-	#my-name{
-		font-size: 3.8em;
+		margin: 0 0 50px 0;
 	}
 
 	pre code{
@@ -401,7 +428,7 @@ code{
 	}
 
 	.article-images{
-		width: 100%;
+		max-width: 540px;
 	}
 
 	.divide{
@@ -409,6 +436,44 @@ code{
 		height: 3px;
 		width: 100%;
 		background-color: #FC5185;
-
 	}
-}
+
+	#social-nav{
+		height: 100px;
+		margin: 0;
+	}
+	
+	.confetti{
+		display: none;
+	}
+
+	#to-top{
+		display: none;
+		text-decoration: none;
+		position: fixed;
+		padding: 1.5rem;
+		border-radius: 20px;
+		bottom: 25px;
+		right: 20px;
+		text-align: center;
+		font-size: 2rem;
+		color: #f0f0f0;
+		background-color: #FC5185; 
+		border: none;
+	}
+
+	.color-bar{
+		width: 80%;
+	}
+
+	.mobile-color-bar{
+		margin: auto;
+		height: 3px;
+		width: 80%;
+		background-color: #FC5185;
+		animation-name: fadeIn;
+		animation-duration: 3s;
+	}
+
+
+}	
