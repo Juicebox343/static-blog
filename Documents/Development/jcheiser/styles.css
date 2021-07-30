@@ -1,0 +1,279 @@
+:root{
+  --main-font: 'Raleway', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body{
+  margin: 0;
+  padding: 0;
+  font-family: var(--main-font);
+}
+
+body{
+  margin: 0 auto 2rem;
+  padding: 0;
+  background-color: #231347;
+  background: linear-gradient(90deg, #231347 0%, #221342 100%);
+}
+
+h2{
+  font-size: 1.2rem;
+  width: 100%;
+}
+
+.colorBar{
+  display: flex;
+}
+
+.colorBar > span{
+  display: inline-block;
+  width: 100%;
+  height: 8px;
+}
+
+.colorBar span:nth-child(1){
+  background-color: #FF4D4D;
+}
+
+.colorBar span:nth-child(2){
+  background-color: #FF8C00;
+}
+
+.colorBar span:nth-child(3){
+  background-color: #F6D300;
+}
+
+.colorBar span:nth-child(4){
+  background-color: #009959;
+}
+
+.colorBar span:nth-child(5){
+  background-color: #668CFF;
+}
+
+.colorBar span:nth-child(6){
+  background-color: #B300B3;
+}
+
+.container{
+  padding: 0 2rem;
+  width: 1600px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 8px 1fr;
+  column-gap: 6rem;
+  row-gap: 2rem;
+}
+
+header{
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+  color: #8E77C0;
+  line-height: 150%;
+}
+
+.social-contact ul{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.social-contact li{
+  list-style-type: none;
+  margin: 0 1rem;
+  padding: 0;
+}
+
+.social-contact li a{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.social-contact li img{
+  width: 28px;
+}
+
+.headshot{
+  border-radius: 50%;
+  max-width: 100%;
+  height: auto;
+}
+
+main{
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  justify-self: center;
+  align-self: center;
+  width: 100%;
+}
+
+
+
+.site-cards, .site-card{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  
+}
+
+.site-cards{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.site-card h2{
+  margin: 0 0 .2rem 0;
+  font-weight: 500;
+  color:rgb(230, 230, 230);
+}
+
+.site-card{
+  margin-bottom: 2rem;
+  font-size: .9rem;
+  width: 100%;
+}
+
+.site-card:hover:nth-child(even){
+  transition: .1s ease-in-out;
+  transform: scale(.99) rotate(0.5deg);
+}
+
+.site-card:hover:nth-child(odd){
+  transition: .1s ease-in-out;
+  transform: scale(.99) rotate(-0.5deg);
+}
+
+.site-card:last-child{
+  margin-bottom: 0;
+}
+
+.site-card .card-content{
+  border-radius: 12px;
+  width: 100%;
+  background-color: #5c4886;
+  box-shadow:3px 3px 13px #260244;
+  transition: .25s ease-in-out;
+  display: flex;
+}
+
+.site-card .image-container{
+  margin-right: 1rem;
+
+  flex: 1 1 0;
+}
+
+.site-card .image-container img{
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+  height: 100%;
+  object-fit: cover;
+}
+
+.site-card .item-description{
+  margin: 0 1rem;
+  align-self: center;
+  font-weight: 200;
+  letter-spacing: .3px;
+  line-height: 150%;
+  flex: 1 1 0;
+}
+
+.site-card a, .site-card p{
+  color: rgb(230, 230, 230);
+  text-decoration: none;
+}
+
+header a{
+  color: #FF8C00;
+}
+
+header a:visited{
+  color: #FF8C00;
+}
+
+.high-contrast{
+  color: white;
+  background-color: black;
+}
+
+@media only screen and (max-width: 1300px) {
+
+  .container{
+    width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 8px 1fr;
+    column-gap: 2rem;
+  }
+
+
+
+  .site-card{
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .site-card .card-content{
+    flex-direction: column;
+
+  }
+
+  .site-card .image-container{
+    width: 100%;
+  }
+
+  .site-card .image-container img{
+    border-radius: 0;
+    border-top-left-radius: 12px; 
+    border-top-right-radius: 12px; 
+    width: 100%;
+  }
+
+  .site-card .item-description{
+    padding: 1rem;
+    width: 100%;
+  }
+
+  .site-cards{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+
+@media only screen and (max-width: 750px) {
+  .container{
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  header{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .headshot{
+    align-self: center;
+    width: 250px; 
+  }
+
+  .site-cards{
+    width: 100%;
+  }
+
+  .site-card{
+    width: 100%;
+  }
+}
