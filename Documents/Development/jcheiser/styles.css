@@ -207,20 +207,42 @@ header a:visited{
 .skills-experience ul{
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
 .skills-experience li{
+  list-style-type: none;
   flex: 1 1 auto;
   margin: 0.2rem;
-  padding: 0.25rem 1rem;
-  list-style-type: none;
+}
+
+.skills-experience li button{
+  display: inline-block;
   text-align: center;
   border: solid 2px #ff8c00;
   background-color: #341d6b;
+  box-shadow: 1px 2px 0 #ff8c00;
   border-radius: 5px;
+  padding: .5rem 1rem;
+  width: 100%;
+  height: 100%;
+  transition: all .1s;
 }
 
+.skills-experience li button:hover{
+  border: solid 2px #ff8c00;
+  background-color: #341d6b;
+  box-shadow: 0 0 0 #ff8c00;
+  transform: translate(2px, 2px);
+}
 
+.skills-experience li button:active{
+  border: solid 2px #ff8c00;
+  background-color: #633eb9;
+  transform: translate(3px, 3px);
+}
 
 .skills-experience h3{
   margin: 0;
@@ -230,11 +252,19 @@ header a:visited{
   letter-spacing: 1px;
 }
 
-.skills-experience ul{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+.canvas{
+  width: 100%;
+  height: 250px;
+  background-color: #633eb9;
 }
+
+.skills-experience.game button{
+  color: #ff8c00;
+  font-size: 1.2rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
 
 @media only screen and (max-width: 1300px) {
 
