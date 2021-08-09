@@ -204,6 +204,38 @@ header a:visited{
   background-color: black;
 }
 
+.skills-experience ul{
+  margin: 0;
+  padding: 0;
+}
+
+.skills-experience li{
+  flex: 1 1 auto;
+  margin: 0.2rem;
+  padding: 0.25rem 1rem;
+  list-style-type: none;
+  text-align: center;
+  border: solid 2px #ff8c00;
+  background-color: #341d6b;
+  border-radius: 5px;
+}
+
+
+
+.skills-experience h3{
+  margin: 0;
+  color: #ff8c00;
+  font-size: .75rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.skills-experience ul{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
 @media only screen and (max-width: 1300px) {
 
   .container{
